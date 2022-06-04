@@ -3,6 +3,7 @@ import FeedBackOptions from './FeedBackOptions';
 import Section from './Section';
 import Statistics from './Statistics';
 import Notification from './Notification';
+import s from './App.module.css';
 class App extends Component {
   state = {
     good: 0,
@@ -35,7 +36,7 @@ class App extends Component {
     const options = Object.keys(this.state);
     const countTotalFeedback = this.countTotalFeedback();
     return (
-      <div>
+      <div className={s.container}>
         <Section title="Please leave feedback">
           <FeedBackOptions
             options={options}
