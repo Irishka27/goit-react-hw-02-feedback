@@ -28,7 +28,7 @@ class App extends Component {
       result = Math.ceil((goodFeedback * 100) / totalFeedback);
     }
 
-    return ` ${result} %`;
+    return `  ${result} %`;
   };
   render() {
     const { good, neutral, bad } = this.state;
