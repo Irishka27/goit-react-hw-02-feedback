@@ -36,13 +36,13 @@ class App extends Component {
     const countTotalFeedback = this.countTotalFeedback();
     return (
       <div>
-        <Section title="Please leave feedback">
+        <Section tittle="Please leave feedback">
           <FeedBackOptions
             options={options}
             onLeaveFeedback={this.handleClickButton}
           />
         </Section>
-        <Section title="Statistics">
+        <Section tittle="Statistics">
           {countTotalFeedback > 0 ? (
             <Statistics
               good={good}
