@@ -21,7 +21,11 @@ function FeedBackOptions({ options, onLeaveFeedback }) {
 }
 
 FeedBackOptions.prototype = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  options: PropTypes.arrayOf(PropTypes.exact({
+    good: PropTypes.string.isRequired,
+    neutral: PropTypes.string.isRequired,
+    bad: PropTypes.string.isRequired,
+  })).isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
